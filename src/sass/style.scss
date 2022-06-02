@@ -1,0 +1,18 @@
+@import 'base/variables';
+* {
+	font-family: 'Museo Sans Cyrl', sans-serif;
+}
+.container {
+	position: relative; //для того, чтобы можно было установить стрелки на слайдере в нужном положении
+	max-width: 950px;
+	margin: 0 auto;
+}
+@import 'libs/font.scss';
+@import 'blocks/promo.scss';
+@import 'blocks/header.scss';
+@import 'blocks/buttons.scss';
+@import 'blocks/advantages.scss';
+@import 'blocks/titles.scss';
+@import 'blocks/consultation.scss';
+@import 'blocks/forms.scss';
+@import 'blocks/carousel.scss';
