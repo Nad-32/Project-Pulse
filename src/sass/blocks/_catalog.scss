@@ -43,6 +43,7 @@
 		min-height: 440px;
 		border: 2px solid #E8E8E8;
 		padding: 20px;
+		overflow: hidden;
 		&__img {
 			display: block;
 			margin: 0 auto;
@@ -102,6 +103,52 @@
 			font-weight: 700;
 			font-size: 20px;
 			line-height: 20px;
+		}
+		&__wrapper {
+			display: flex;
+			width: calc(200% + 40px);
+		}
+		&__content {
+			width: 50%;
+			margin-right: 0;
+			transform: translateX(-100%);
+			transition: 0.5s all;
+			&_active {
+				margin-right: 20px;
+				transform: translateX(0%);
+			}
+		}
+		&__list {
+			position: relative;
+			width: 50%;
+			margin-left: 20px;
+			padding-right: 20px;
+			transform: translateX(0%);
+			transition: 0.5s all;
+			margin-bottom: 0; //У списка убираю стандартные стили
+			padding-left: 19px; //У списка заменяю стандартные стили на стили из макета. У Ивана в макете расстояние до красных квадратиков 14px, сами квадратики по 5px, итого 19px
+			list-style-type: none;
+			&_active {
+				margin-left: 0;
+				transform: translateX(-100%);
+			}
+			li {
+				position: relative;
+				color: #555555;
+				font-weight: 300;
+				font-size: 14px;
+				line-height: 21px;
+				margin-bottom: 20px;
+				&::before {
+					content: '';
+					position: absolute;
+					width: 5px;
+					height: 5px;
+					background-color: $main-color;
+					left: -14px;
+					top: 7px;
+				}
+			}
 		}
 	}
 }
