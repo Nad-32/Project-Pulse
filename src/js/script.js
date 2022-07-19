@@ -48,4 +48,28 @@ $(document).ready(function(){
 			$('.overlay, #order').fadeIn('slow');
 		});
 	});
+
+	$('#consultation-form').validate();
+	$('#consultation form').validate({
+		rules: {
+			name: "required",
+			phone: "required",
+			email: {
+				required: true,
+				email: true
+			}
+		},
+		messages: {
+			name: "Пожалуйста, укажите свое имя",
+			phone: "Пожалуйста, укажите свой номер телефона",
+			email: {
+				required: "Пожалуйста, укажите свою почту",
+				email: "Неправильно введен адрес почты"
+			}
+		}
+	});
+	$('#order form').validate();
+	function valideForms(form){
+		
+	}
 });
