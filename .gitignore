@@ -19,3 +19,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# чтобы изменения в файле smart.php не отслеживались и не выкладывались на гитхаб
+src/mailer/smart.php
