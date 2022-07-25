@@ -129,20 +129,22 @@
 				transform: translateX(0%);
 			}
 		}
-		&__list {
+		&__block {
 			position: relative;
 			width: 50%;
 			margin-left: 20px;
 			padding-right: 20px;
 			transform: translateX(0%);
 			transition: 0.5s all;
-			margin-bottom: 0; //У списка убираю стандартные стили
-			padding-left: 19px; //У списка заменяю стандартные стили на стили из макета. У Ивана в макете расстояние до красных квадратиков 14px, сами квадратики по 5px, итого 19px
-			list-style-type: none;
 			&_active {
 				margin-left: 0;
 				transform: translateX(-100%);
 			}
+		}
+		&__list {
+			margin-bottom: 0; //У списка убираю стандартные стили
+			padding-left: 19px; //У списка заменяю стандартные стили на стили из макета. У Ивана в макете расстояние до красных квадратиков 14px, сами квадратики по 5px, итого 19px
+			list-style-type: none;
 			li {
 				position: relative;
 				color: #555555;
